@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Movie</title>
+    <style>
+        main {
+            width: 100%;
+            height: 100dvh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: start;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="{% url 'search' %}" method="GET">
+            <input type="text" name="name" placeholder="Search Movie">
+            <button type="submit">Search</button>
+        </form>
+        <div class="main">
+            <div>
+                <h1>City List</h1>
+                <form action="{% url 'moviecity' %}">
+                    <p>{{ currentCity}}</p>
+                    <select name="city" id="getCity">
+                        <option value="{{ currentCity }}">{{ currentCity }}</option>
+                        {% for city in cities %}
+                        <option value="{{ city.name }}">{{ city.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Choose</button>
+                </form>
+            </div>
+        <div>
+            <h2>{{ currentCity }} This</h2>
+            <h1>Movie List</h1>
+            {% if movie %}
+                    <p>{{ movie.name }}</p>
+                    <p>{{ movie.runtime }}</p>
+                    <p>{{ movie.desc }}</p>
+                    <p>{{ movie.release }}</p>
+                    <p>{{ movie.lang }}</p>
+                    <p>{{ movie.genre }}</p>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{% url 'ticket' movie.id %}"><button>Book Ticket</button></a>
+            {% else %}
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+
+</html>

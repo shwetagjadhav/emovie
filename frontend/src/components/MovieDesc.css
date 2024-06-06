@@ -1,0 +1,39 @@
+.cola{  
+  padding: 20px;
+  padding-right: 30px;  
+ 
+}
+.polaroid img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.rowz {
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  width: 90%;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height:max-content;
+}
+.movie-container {
+  margin-top: 50px;
+  margin-left: 15px;
+  font-size: 20px;
+  text-wrap: wrap;
+ 
+width: 60%;
+
+}
+.col{
+  padding-left: 10px;
+
+}
+#title{
+  margin-top: 25px;
+}
+

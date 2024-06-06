@@ -1,0 +1,13 @@
+.categories{
+	
+	background-image: linear-gradient(rgba(99, 112, 168, 0.5) , rgba(212, 214, 244, 0.5));
+	overflow-x: hidden;
+	padding: 16px;
+	
+}
+
+.title-text h2{
+	color: white;
+    padding-top: 19px;
+	padding-left: 20px;
+}
